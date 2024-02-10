@@ -32,6 +32,9 @@ To install Swift Trials, follow these steps:
    
    pip install -r requirements.txt
 
+4. run locally using the `streamlit` command 
+`streamlit run ./Home.py`
+
 
 ## Usage
 
@@ -54,10 +57,10 @@ We welcome contributions from the community! To contribute to Swift Trials, plea
 
 ## Credits
 
-- Author 1: [@author1](https://github.com/theharshithh)
-- Author 2: [@author2](https://github.com/Tejas-R-Pattar)
-- Author 3: [@author3](https://github.com/ApoorvBrooklyn)
+- Harshith Murthy: [@author1](https://github.com/theharshithh)
+-Tejas Pattar: [@author2](https://github.com/Tejas-R-Pattar)
+- Aproov Sadhale: [@author3](https://github.com/ApoorvBrooklyn)
 
 ## Contact
 
-For support or inquiries, please contact the Swift Trials team at kharshithmurthy@gmail.com
+For support or inquiries, please contact the Swift Trials team at kmurthyharshith@gmail.com
