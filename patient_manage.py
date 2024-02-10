@@ -2,7 +2,10 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from io import BytesIO
 from openai import OpenAI
+from dotenv import dotenv_values
 
+
+env_vars = dotenv_values('.env')
 
 def read_pdf(uploaded_file):
     if uploaded_file is not None:
@@ -19,7 +22,7 @@ def read_pdf(uploaded_file):
 flag_result = ""
 # Your other functions remain unchanged
 def patient_flag(patient_details, medical_report):
-    api_key = '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'
+    api_key = env_vars['API_KEY']
     client = OpenAI(api_key=api_key)
     instructions = """I want u to act like a simple flagging bot. Lets keep it simple. I will share with you a medical report or a patient's condition, and I need u to give me the following thing: True if the patient is fit for the medical trials, false if the patient is not fit for the medical trials.
     Here is a reference of Vital Data: Patient ID,Age,Sex,Temperature,Heart Beat,Respiratory Rate,Systolic BP,Diastolic BP,Oxygen Saturation\n1,29,M,98.6,72,16,120,80,98\n2,34,F,96.9,75,14,115,75,99\n3,45,M,98.4,70,18,110,70,97\n4,26,F,97.8,78,16,118,76,98\n5,37,M,97.1,72,15,120,80,96\n6,50,F,98.6,74,16,122,82,97\n7,32,M,97.7,68,14,115,78,99\n8,28,F,98.5,76,18,117,75,98\n9,41,M,98.6,70,17,119,79,96\n10,28,M,97.06,72,16,120,80,98\n
